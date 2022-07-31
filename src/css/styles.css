@@ -1,0 +1,149 @@
+ @font-face {
+    font-family: 'Aniron';
+    src: url(.//Aniron-font.tff.ttf);
+ }
+ 
+ body {
+    font-family: 'Aniron', sans-serif;
+    background-image: url(../imagens/the-shire-blur.png);
+    background-repeat: no repeat;
+    background-size: cover;
+    min-height: 100vh;
+ }
+
+ .headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-top: 30px;
+ }
+
+ .headline .title {
+    color: #d4af37;
+    font-size: 25px;
+ }
+
+ .headline .lotr {
+    width:70px;
+    height: 70px;
+ }
+
+ .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 10px;
+ }
+
+ .list {
+    width: 310px;
+    height: 500px;
+    position: relative;
+ }
+
+ .btn-arrow {
+    background-color: #f1ecff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer; 
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: box-shadow rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+ }
+
+ .btn-arrow.btn-back {
+    transform: rotateY(180deg);
+ }
+
+ .btn-arrow:hover {
+    background-color: #d4af37;
+ }
+ 
+.card {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;;
+    position: absolute;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card.selected {
+    opacity: 1;
+    z-index: 1;
+}
+
+.frodo {
+    background: url(../imagens/mordor.png) no-repeat;
+}
+
+.sam {
+    background: url(../imagens/mount\ doom.jpg) no-repeat;
+}
+
+.merry {
+    background: url(../imagens/pellenor\ fields.jpg);
+}
+
+.pippin {
+    background: url(../imagens/fangorn.jpg);
+}
+
+.card .info {
+    background-color: #d4af37;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .info .name {
+    color: #000;
+    font-size: 18px;
+}
+
+.card .image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card .image-hobbit {
+    max-width: 100%;
+    max-height: 230px;
+    padding: 20px 20 0 20;
+    margin-bottom: -1rem;
+}
+
+.card .description {
+    background: rbga(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card .description .bio {
+    background-color: #d4af37;
+    color: #000;
+    font-size: 15px;
+    padding: 8px;
+}
+
+.card .description .text {
+    font-size: 12px;
+    padding: 10px;
+    text-align: justify;
+    max-height: 125px;
+    overflow-y: scroll;
+    background-color: #E2E5DE;
+    
+}
