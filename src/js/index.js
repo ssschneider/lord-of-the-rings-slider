@@ -32,7 +32,9 @@ function showCard (indexCard){
 
 btnNext.addEventListener('click', function(){
 
-    if(currentCard === cards.length - 1) return;
+    if(currentCard === cards.length - 1) {
+        currentCard = -1
+    };
 
     hideCurrentCard();
 
@@ -43,7 +45,9 @@ btnNext.addEventListener('click', function(){
 
 btnBack.addEventListener('click', function(){
 
-    if(currentCard === 0) return;
+    if(currentCard === 0) {
+        currentCard = cards.length
+    };
     
     hideCurrentCard();
 
